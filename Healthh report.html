@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Health Report</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #0066cc;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            max-width: 800px;
+        }
+        label {
+            display: inline-block;
+            width: 280px;
+            margin-bottom: 10px;
+        }
+        input, select, textarea {
+            padding: 8px;
+            width: 60%;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        textarea {
+            height: 80px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004c99;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nilen Hospital Health Report Form</h1>
+
+    <form action="submit_health_report.php" method="POST">
+
+        <div class="section">
+            <h2>Personal Information</h2>
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter full name" required>
+            </p>
+            <p>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </p>
+            <p>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Contact Information</h2>
+            <p>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +91 9876543210">
+            </p>
+            <p>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com">
+            </p>
+            <p>
+                <label for="address">Residential Address:</label>
+                <textarea id="address" name="address" placeholder="Street, City, Pincode"></textarea>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Medical History</h2>
+            <p>
+                <label for="allergies">Known Allergies:</label>
+                <input type="text" id="allergies" name="allergies" placeholder="e.g. Penicillin, Nuts">
+            </p>
+            <p>
+                <label for="conditions">Pre-existing Medical Conditions:</label>
+                <textarea id="conditions" name="conditions" placeholder="e.g. Diabetes, Asthma"></textarea>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Lifestyle & Habits</h2>
+            <p>
+                <label for="smoking">Do you smoke?</label>
+                <select id="smoking" name="smoking">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                    <option value="occasionally">Occasionally</option>
+                </select>
+            </p>
+            <p>
+                <label for="alcohol">Do you consume alcohol?</label>
+                <select id="alcohol" name="alcohol">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                    <option value="occasionally">Occasionally</option>
+                </select>
+            </p>
+            <p>
+                <label for="exercise">Physical Activity Level:</label>
+                <select id="exercise" name="exercise">
+                    <option value="none">None</option>
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </p>
+        </div>
+
+        <button type="submit">Submit Report</button>
+
+    </form>
+</body>
+</html>
